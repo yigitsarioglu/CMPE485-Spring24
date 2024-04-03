@@ -4,7 +4,7 @@ using System.Collections;
 public class TrapController : MonoBehaviour
 {
     public GameObject firePrefab; // Ateş engeli prefab
-    public int maxTraps = 10; // Maksimum tuzak sayısı
+    public int maxTraps = 6; // Maksimum tuzak sayısı
     public float trapInterval = 5f; // Tuzak aralığı
 
     private int currentTrapsCount = 0; // Mevcut tuzak sayısı
@@ -30,13 +30,13 @@ public class TrapController : MonoBehaviour
             if (currentTrapsCount < maxTraps)
             {
                 CreateTrap();
-               // currentTrapsCount = GameObject.FindGameObjectsWithTag("Trap").Length;
+                currentTrapsCount = GameObject.FindGameObjectsWithTag("Trap").Length;
             }
             
             yield return new WaitForSeconds(trapInterval);
             
             // Tuzakları temizle
-           // ClearTraps();
+            ClearTraps();
             yield return new WaitForSeconds(1);
             Debug.Log("After clear Current Traps Count: " + currentTrapsCount);
 

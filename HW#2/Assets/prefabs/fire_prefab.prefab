@@ -9704,7 +9704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3540e03f77bf7f4db3c009321c2db98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePrefab: {fileID: 0}
+  firePrefab: {fileID: 3606960274625445158}
   maxTraps: 6
   trapInterval: 3
   minX: -10
